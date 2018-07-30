@@ -1,0 +1,7 @@
+{
+  "name": "proyectoReciclaje",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
