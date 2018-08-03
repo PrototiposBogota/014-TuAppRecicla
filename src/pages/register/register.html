@@ -7,42 +7,23 @@
 <ion-header>
 
   <ion-navbar>
-      <button ion-button menuToggle>
-          <ion-icon name="menu"></ion-icon>
-        </button>
     <ion-title>Registro</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="closeModalRegistro()">Cerrar</button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-    <ion-list>
-
-    <ion-item>
-      <ion-label>Cedula</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-        <ion-label>Nombre</ion-label>
-        <ion-input type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-        <ion-label>Apellidos</ion-label>
-        <ion-input type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-        <ion-label>Correo electronico</ion-label>
-        <ion-input type="email"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Contraseña</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
-  
-  </ion-list>
-  
-  <div padding>
-      <button ion-button outline>Registrarme</button>
-  </div>
+  <ion-item >
+    <ion-label floating>Dirección de Correo </ion-label>
+    <ion-input type="text" [(ngModel)]="user.email" ></ion-input>
+  </ion-item>
+  <ion-item >
+    <ion-label floating>Contraseña</ion-label>
+    <ion-input type="password" [(ngModel)]="user.password" ></ion-input>
+  </ion-item>
+    <button ion-button color="light" (click)="register(user)">Registrar</button>
 </ion-content>

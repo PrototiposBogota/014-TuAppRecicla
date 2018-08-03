@@ -2,8 +2,8 @@
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Inicio</ion-title>
+    </button> 
+    <ion-title>Tu app Recicla</ion-title>
   </ion-navbar>
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 </ion-header>
@@ -11,8 +11,8 @@
 <ion-content padding>
   <div class="btn-home">
   <!-- Only icon (no text) -->
-  <button ion-button outline>Registro</button>
-  <button ion-button color="secondary" outline>Ingresar</button>
+  <button ion-button outline (click)="openModalRegistro()">Registro</button>
+  <button ion-button color="secondary" outline (click)="openModalLogin()">Ingresar</button>
   </div>
   
     <ion-card>
