@@ -12,11 +12,14 @@ import { MenuPage } from '../pages/menu/menu';
 import { SearchPage } from '../pages/search/search';
 import { CentrosAcopioPage } from '../pages/centros-acopio/centros-acopio';
 import { ContenidosPage } from '../pages/contenidos/contenidos';
+import { HomeService } from '../pages/services/home.service';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { FIREBASE_CONFIG } from './app.firebase.config';
+import { Geolocation } from '@ionic-native/geolocation';
+
 
 @NgModule({
   declarations: [
@@ -29,14 +32,7 @@ import { FIREBASE_CONFIG } from './app.firebase.config';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp,{
-      menuType: 'push',
-      platforms: {
-        ios: {
-          menuType: 'overlay',
-        }
-      }
-    }),
+    IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireAuthModule
   ],
@@ -46,13 +42,14 @@ import { FIREBASE_CONFIG } from './app.firebase.config';
     HomePage,
     MenuPage,
     SearchPage,
-    CentrosAcopioPage,
-    ContenidosPage
+    CentrosAcopioPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    HomeService,
+    Geolocation
   ]
 })
 export class AppModule {}

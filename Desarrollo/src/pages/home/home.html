@@ -4,20 +4,32 @@
       <ion-icon name="menu"></ion-icon>
     </button> 
     <ion-title>Tu app Recicla</ion-title>
+    <ion-buttons end>
+      <button ion-button outline (click)="openModalRegistro()">Registro</button>
+    <button ion-button color="secondary" outline (click)="openModalLogin()">Ingresar</button>
+    </ion-buttons>
+    
   </ion-navbar>
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 </ion-header>
 
 <ion-content padding>
-  <div class="btn-home">
-  <!-- Only icon (no text) -->
-  <button ion-button outline (click)="openModalRegistro()">Registro</button>
-  <button ion-button color="secondary" outline (click)="openModalLogin()">Ingresar</button>
-  </div>
   
     <ion-card>
       <img src="./assets/imgs/header.jpg"/>
     </ion-card>
+
+    <ion-card *ngFor="let product of products">
+        <ion-card-header>
+            {{ product.title }}
+          </ion-card-header>
+          <ion-card-content>
+              {{ product.description }}
+
+              <img src={{product.image}}/>
+            </ion-card-content>      
+    </ion-card>
+    
     <ion-card>
         <ion-card-header>
           ¿Que és reciclaje?
@@ -53,6 +65,6 @@
               Texto descriptivo
               
             </ion-card-content>
-            <button ion-button outline>Registro</button>
+            <button ion-button outline (click)="openModalRegistro()">Registro</button>
           </ion-card>
 </ion-content>

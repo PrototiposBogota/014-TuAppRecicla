@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 import { User } from '../../models/user';
 import { AngularFireAuth } from "angularfire2/auth";
-import { HomePage } from '../home/home';
 import { MenuPage } from '../menu/menu';
 /**
  * Generated class for the LoginPage page.

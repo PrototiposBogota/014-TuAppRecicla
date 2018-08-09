@@ -29,8 +29,7 @@ export class MyApp {
      // { title: 'Inicio', component: HomePage },
       //{ title: 'Vista interna', component: MenuPage },
       { title: 'Buscador', component: SearchPage },
-      { title: 'Centros Acopio', component: CentrosAcopioPage },
-      { title: 'Contenidos', component: ContenidosPage }
+      { title: 'Centros Acopio', component: CentrosAcopioPage }
     ];
 
   }

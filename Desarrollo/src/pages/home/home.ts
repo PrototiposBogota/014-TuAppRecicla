@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ModalController } from 'ionic-angular';
+import { HomeService } from '../services/home.service';
 
 @Component({
   selector: 'page-home',
@@ -8,9 +9,10 @@ import { ModalController } from 'ionic-angular';
 })
 export class HomePage {
   
-
-  constructor(public navCtrl: NavController, public modal: ModalController) {
-
+  products = [];
+  constructor(public navCtrl: NavController, public modal: ModalController, public productsService: HomeService) {
+    this.products=productsService.getImages();
+    console.log(this.products);
   }
 
   openModalRegistro(){
