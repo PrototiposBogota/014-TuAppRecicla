@@ -2,69 +2,90 @@
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
-    </button> 
+    </button>
     <ion-title>Tu app Recicla</ion-title>
     <ion-buttons end>
       <button ion-button outline (click)="openModalRegistro()">Registro</button>
-    <button ion-button color="secondary" outline (click)="openModalLogin()">Ingresar</button>
+      <button ion-button color="secondary" outline (click)="openModalLogin()">Ingresar</button>
     </ion-buttons>
-    
+
   </ion-navbar>
-  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  
 </ion-header>
 
 <ion-content padding>
-  
-    <ion-card>
-      <img src="./assets/imgs/header.jpg"/>
-    </ion-card>
 
-    <ion-card *ngFor="let product of products">
-        <ion-card-header>
-            {{ product.title }}
-          </ion-card-header>
-          <ion-card-content>
-              {{ product.description }}
+  <ion-card>
+    <img src="./assets/imgs/header.jpg" />
+  </ion-card>
 
-              <img src={{product.image}}/>
-            </ion-card-content>      
-    </ion-card>
-    
-    <ion-card>
-        <ion-card-header>
-          ¿Que és reciclaje?
-        </ion-card-header>
-        <ion-card-content>
-          Texto descriptivo
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
-          <ion-card-header>
-            ¿Cómo reciclar?
-          </ion-card-header>
-          <ion-card-content>
-            Texto descriptivo
-            <img col-6 src="https://www.canecasdereciclaje.com/imagenes/vco_ecommerce/d36499237393bd0fe18a40bfc1280523.jpg"/>
-            <img col-6 src="https://i.pinimg.com/736x/2f/a8/69/2fa86982794943ccadef299fbd862a46.jpg"/>
-          </ion-card-content>
-        </ion-card>
-        <ion-card>
-            <ion-card-header>
-            Categorias
-            </ion-card-header>
-            <ion-card-content>
-              Texto descriptivo
-              
-            </ion-card-content>
-          </ion-card>
-        <ion-card>
-            <ion-card-header>
-             Acerca de nosotros
-            </ion-card-header>
-            <ion-card-content>
-              Texto descriptivo
-              
-            </ion-card-content>
-            <button ion-button outline (click)="openModalRegistro()">Registro</button>
-          </ion-card>
+  <!-- <ion-card *ngFor="let product of products">
+    <ion-card-header>
+      {{ product.title }}
+    </ion-card-header>
+    <ion-card-content>
+      {{ product.description }}
+
+      <img src={{product.image}}/>
+    </ion-card-content>
+  </ion-card> -->
+
+  <ion-card>
+      <ion-card-header text-center>
+          <h1>¿Que és reciclaje?</h1>
+      </ion-card-header>
+    <ion-card-content text-center>
+      <p class="text">El reciclaje es un proceso que consiste en obtener una materia prima o producto a partir de un desecho.</p>
+      <br>
+      <p class="text"> Este proceso ayuda a reducir el consumo de recursos y la degradación del planeta.</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+      <ion-card-header text-center>
+          <h1>¿Cómo reciclar?</h1>
+      </ion-card-header>
+    <ion-card-content>
+      <p class="text">Existen varias formas de reciclar, en las calles de Bogotá puedes encontrar canecas con distintos colores en las cuales puedes depositar ciertos productos:</p>
+      <ion-item-group>
+          <ion-item-divider color="light-d">Caneca gris</ion-item-divider>
+          <ion-item>Papel</ion-item>
+          <ion-item>Cartón</ion-item>
+      </ion-item-group>
+      <ion-item-group>
+          <ion-item-divider color="light-d">Caneca azul</ion-item-divider>
+          <ion-item>Plástico</ion-item>
+      </ion-item-group>
+      <ion-item-group>
+      <ion-item-divider color="light-d">Caneca verde</ion-item-divider>
+      <ion-item>Ordinarios</ion-item>
+      </ion-item-group>
+      <img src="./assets/imgs/reciclar-canecas.jpg"/>
+      <p class="text">En los hogares también se puede reciclar utilizando dos tipos de bolsas:</p>
+      <ion-item-group>
+          <ion-item-divider color="light-d">Bolsa negra</ion-item-divider>
+          <ion-item>Ordinarios</ion-item>
+      </ion-item-group>
+      <ion-item-group>
+      <ion-item-divider color="light-d">Bolsa blanca</ion-item-divider>
+      <ion-item>Reciclaje</ion-item>
+      </ion-item-group>
+      <img src="./assets/imgs/recicla-en-casa.jpg"/>
+  </ion-card-content>
+  </ion-card>
+  <ion-card>
+      <ion-card-header text-center>
+          <h1>Acerca de nosotros</h1>
+       </ion-card-header>
+    <ion-card-content>
+        <p class="text">Tu app recicla es un proyecto que busca generar conciencia sobre la importancia del reciclaje en la vida cotidiana, aquí podrás encontrar:</p>
+        <ul class="list">
+            <li class="item"><b>Buscador de productos:</b> Buscar un producto en especifico y saber datos básicos, a que categoría pertenece y en que caneca se debe depositar</li>
+            <li class="item"><b>Contenidos:</b> Información de interés sobre el reciclaje</li>
+            <li class="item"><b>Manualidades:</b> Proyectos que puedes realizar con productos reciclados</li>
+            <li class="item"><b>Centros de acopio:</b> Un mapa con todos los centros de acopio que compran reciclaje</li>
+        </ul>
+        <p class="text">Disfruta, aprende y toma conciencia <b>¡Registrate!</b></p>
+    </ion-card-content>
+    <button ion-button outline (click)="openModalRegistro()">Registro</button>
+  </ion-card>
 </ion-content>
